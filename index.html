@@ -1,1 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050b14">
+  <title>JARVIS AI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
 
+<body>
+
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="mini-core"></div>
+      <div>
+        <strong>JARVIS</strong>
+        <span>AI SYSTEM</span>
+      </div>
+    </div>
+
+    <div id="modes" class="modes"></div>
+
+    <button id="settingsBtn" class="settings-btn">⚙️ Settings</button>
+
+    <div class="system">
+      <span class="dot"></span>
+      All systems online
+    </div>
+  </aside>
+
+  <main>
+
+    <header>
+      <div>
+        <p class="eyebrow">PERSONAL AI ASSISTANT</p>
+        <h1 id="modeTitle">Assistant Mode</h1>
+        <p id="modeDesc">Normal AI conversation and questions.</p>
+      </div>
+
+      <div class="clock">
+        <strong id="time">--:--</strong>
+        <span id="date">---</span>
+      </div>
+    </header>
+
+    <section class="dashboard">
+
+      <div class="core-card">
+
+        <div class="ring ring1"></div>
+        <div class="ring ring2"></div>
+
+        <div id="core" class="core">
+          <span>J</span>
+        </div>
+
+        <div id="state" class="state">STANDBY</div>
+
+        <div class="core-buttons">
+          <button id="mic">🎙️</button>
+          <button id="speak">🔊</button>
+        </div>
+
+      </div>
+
+      <div class="chat-card">
+
+        <div class="chat-head">
+          <strong>CONVERSATION</strong>
+          <button id="clear">Clear</button>
+        </div>
+
+        <div id="messages" class="messages">
+          <div class="message jarvis">
+            <b>JARVIS</b>
+            <p>Hello. Systems are online. How can I help?</p>
+          </div>
+        </div>
+
+        <form id="chatForm">
+          <input
+            id="input"
+            autocomplete="off"
+            placeholder="Ask JARVIS anything..."
+          >
+          <button type="submit">➤</button>
+        </form>
+
+      </div>
+
+    </section>
+
+    <section class="panels">
+
+      <div class="panel">
+        <h3>⚡ Quick Commands</h3>
+
+        <div class="quick">
+          <button data-q="Start a 25 minute focus timer">Focus 25m</button>
+          <button data-q="Give me a study quiz">Study Quiz</button>
+          <button data-q="Help me with math">Math Help</button>
+          <button data-q="Explain coding to me">Coding Help</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>✓ Tasks</h3>
+
+        <div class="task-add">
+          <input id="taskInput" placeholder="Add a task...">
+          <button id="addTask">+</button>
+        </div>
+
+        <div id="tasks"></div>
+      </div>
+
+      <div class="panel">
+        <h3>◉ System Status</h3>
+
+        <div class="status">
+          <span>Core</span>
+          <b>ONLINE</b>
+        </div>
+
+        <div class="status">
+          <span>Voice</span>
+          <b id="voiceStatus">READY</b>
+        </div>
+
+        <div class="status">
+          <span>Storage</span>
+          <b>LOCAL</b>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+</div>
+
+<div id="settings" class="modal hidden">
+
+  <div class="settings-box">
+
+    <button id="closeSettings" class="close">×</button>
+
+    <h2>JARVIS Settings</h2>
+
+    <label>
+      Assistant Name
+      <input id="nameSetting" value="JARVIS">
+    </label>
+
+    <label>
+      Speaking Speed
+      <input
+        id="rate"
+        type="range"
+        min="0.6"
+        max="1.6"
+        step="0.1"
+        value="1"
+      >
+    </label>
+
+    <label class="check">
+      Voice Responses
+      <input id="voiceToggle" type="checkbox" checked>
+    </label>
+
+    <label class="check">
+      Wake Word Mode
+      <input id="wakeToggle" type="checkbox">
+    </label>
+
+    <p class="note">
+      Voice uses your browser's built-in speech features.
+    </p>
+
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
